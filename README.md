@@ -1,5 +1,8 @@
 # Company Name (psus-reponame)
 
+## Project Details:
+- SH Project URL: [Project Name](https://odoo.sh/Project-Name)
+
 ## Branches :
 - SH Production Branch: **_production_**
 - SH Staging  (You can only have three staging branches):
