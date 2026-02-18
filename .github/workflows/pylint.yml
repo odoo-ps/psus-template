@@ -1,0 +1,27 @@
+name: Pylint
+
+on: [pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10"]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    # Makes manifest_checker.py importable by pylint
+    - name: Add repo root to PYTHONPATH
+      run: echo "PYTHONPATH=${{ github.workspace }}" >> "$GITHUB_ENV"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint
+        pip install --upgrade --pre pylint-odoo
+    - name: Analysing the code with pylint
+      run: |
+        pylint **/*.py
