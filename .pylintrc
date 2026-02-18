@@ -1,0 +1,42 @@
+[MASTER]
+load-plugins=pylint_odoo,pylint_odoo_manifest_checker.checker
+score=n
+
+[ODOOLINT]
+manifest-required-authors=Odoo Development Services
+manifest-required-keys=license,author,maintainer
+license-allowed=OPL-1,OEEL-1,LGPL-3,AGPL-3,Other proprietary
+
+
+[MESSAGES CONTROL]
+disable=all
+
+enable=anomalous-backslash-in-string,
+    assignment-from-none,
+    attribute-deprecated,
+    dangerous-default-value,
+    development-status-allowed,
+    duplicate-key,
+    eval-used,
+    license-allowed,
+    manifest-author-string,
+    manifest-deprecated-key,
+    manifest-required-author,
+    manifest-required-key,
+    missing-cloc-exclude,
+    wrong-cloc-exclude-value,
+    pointless-string-statement,
+    print-used,
+    redundant-keyword-arg,
+    reimported,
+    return-in-init,
+    sql-injection,
+    too-few-format-args,
+    translation-field,
+    translation-required,
+    unreachable
+
+[REPORTS]
+msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg}
+output-format=colorized
+reports=no
