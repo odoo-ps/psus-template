@@ -11,7 +11,7 @@ Configuration (in .pylintrc):
     cloc-exclude-modules = odoo_module_a, odoo_module_b, my_custom_module
 
 Usage (typically called by the companion script `run_manifest_check.py`):
-    pylint --load-plugins=pylint_manifest_checker \\
+    pylint --load-plugins=manifest_checker \\
            path/to/odoo_module_a/__manifest__.py \\
            path/to/odoo_module_b/__manifest__.py
 """

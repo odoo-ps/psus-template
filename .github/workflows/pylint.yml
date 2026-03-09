@@ -14,6 +14,9 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
+    # Makes manifest_checker.py importable by pylint
+    - name: Add repo root to PYTHONPATH
+      run: echo "PYTHONPATH=${{ github.workspace }}" >> "$GITHUB_ENV"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
