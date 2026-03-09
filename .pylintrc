@@ -1,5 +1,5 @@
 [MASTER]
-load-plugins=pylint_odoo
+load-plugins=pylint_odoo,pylint_manifest_checker
 score=n
 
 [ODOOLINT]
@@ -38,3 +38,6 @@ enable=anomalous-backslash-in-string,
 msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg}
 output-format=colorized
 reports=no
+
+[MANIFEST-CHECKER]
+cloc-exclude-modules = odoo_module_a, odoo_module_b, my_custom_module
