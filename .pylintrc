@@ -1,11 +1,11 @@
 [MASTER]
-load-plugins=pylint_odoo,manifest_checker
+load-plugins=pylint_odoo,cloc_exclude_checker
 score=n
 
 [ODOOLINT]
 manifest-required-authors=Odoo Development Services
 manifest-required-keys=license,author,maintainer
-license-allowed=OPL-1,LGPL-3,AGPL-3
+license-allowed=OPL-1,OEEL-1,LGPL-3,AGPL-3,Other proprietary
 
 
 [MESSAGES CONTROL]
@@ -38,6 +38,3 @@ enable=anomalous-backslash-in-string,
 msg-template={path}:{line}: [{msg_id}({symbol}), {obj}] {msg}
 output-format=colorized
 reports=no
-
-[MANIFEST-CHECKER]
-cloc-exclude-modules = odoo_module_a, odoo_module_b, my_custom_module
