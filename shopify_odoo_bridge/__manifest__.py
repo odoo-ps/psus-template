@@ -20,7 +20,8 @@
   "category"             :  "Website",
   "version"              :  "1.1.18",
   "sequence"             :  1,
-  "author"               :  "Webkul Software Pvt. Ltd.",
+  "author"               :  "Odoo Development Services",
+  "maintainer"           :  "Webkul Software Pvt. Ltd.",
   "license"              :  "Other proprietary",
   "website"              :  "https://store.webkul.com/odoo-multichannel-shopify-connector.html",
   "description"          :  """https://webkul.com/blog/odoo-multichannel-shopify-connector/
