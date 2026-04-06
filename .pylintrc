@@ -1,5 +1,5 @@
 [MASTER]
-load-plugins=pylint_odoo,pylint-odoo_manifest_checker.checker
+load-plugins=pylint_odoo,pylint_odoo_manifest_checker.checker
 score=n
 
 [ODOOLINT]
