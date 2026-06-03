@@ -171,3 +171,29 @@ cython_debug/
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+# ==========================================
+# Claude Code & Anthropic Integration
+# ==========================================
+
+# Local settings and session caches
+.claude/
+!.claude/commands/      # Keep if you share team-wide slash commands
+
+# Local development and state files
+sessions/
+backups/
+shell-snapshots/
+paste-cache/
+
+# Agent transcripts and task outputs
+.transcripts/
+.task_outputs/
+.tasks/
+
+# Debug logs and prompt histories
+claudecode/claudecode-prompt.txt
+history.jsonl
+debug/
+file-history/
+tmpclaude-*
