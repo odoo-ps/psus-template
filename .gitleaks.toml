@@ -1,0 +1,16 @@
+# .gitleaks.toml — Odoo PS standard secret-scanning config
+# Created by: Odoo PS. Shipped via ps/psus-template to every repo created from it.
+# Extends gitleaks' built-in ruleset. Add ONLY clearly-synthetic placeholders to
+# the allowlist below, so that real secrets are never masked.
+title = "Odoo PS gitleaks config"
+
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Known synthetic placeholders used in Odoo demo/test data"
+regexTarget = "match"
+regexes = [
+  '''(?i)example\.(com|org)''',
+  '''db_password\s*=\s*odoo\b''',
+]

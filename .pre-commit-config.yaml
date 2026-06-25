@@ -32,3 +32,9 @@ repos:
       args: ['--remove']
     - id: no-commit-to-branch
       args: [--branch, main, --branch, master, --branch, production]
+  # Secret scanning — blocks hardcoded credentials/keys/tokens from being committed.
+  # Reads .gitleaks.toml at the repo root for the synthetic-placeholder allowlist.
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.30.1
+    hooks:
+      - id: gitleaks
