@@ -13,4 +13,9 @@ regexTarget = "match"
 regexes = [
   '''(?i)example\.(com|org)''',
   '''db_password\s*=\s*odoo\b''',
+  # Odoo payment-provider TEST credentials (explicit test markers — cannot be live)
+  '''(?:sk|pk|rk)_test_[A-Za-z0-9]{16,}''',   # Stripe test keys
+  '''FLW(?:PUBK|SECK)_TEST-[A-Za-z0-9-]+''',  # Flutterwave test keys
+  '''TEST-[0-9]+-TEST-TEST''',                # Mercado Pago test access token
+  '''coincoin_motherducker''',                # recurring Odoo test webhook placeholder
 ]
