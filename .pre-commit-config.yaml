@@ -31,7 +31,8 @@ repos:
     - id: fix-encoding-pragma
       args: ['--remove']
     - id: no-commit-to-branch
-      args: [--branch, main, --branch, master, --branch, production]
+      args: [--branch, main, --branch, master, --branch, production,
+             --branch, live, --branch, sandbox, --pattern, '.*staging.*']
   # Secret scanning — blocks hardcoded credentials/keys/tokens from being committed.
   # Reads .gitleaks.toml at the repo root for the synthetic-placeholder allowlist.
   - repo: https://github.com/gitleaks/gitleaks
